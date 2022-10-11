@@ -31,7 +31,7 @@ const Presentation = () => {
                         <div className="heading-subtitle-mobile"> with high sensitivity for UI/UX</div>
                 </h1>
                 <p className="Presentation__text">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                You can contact me for front-end development (react-js), custom CRM, plugins, integration, API and more!
                 </p>
                 <div className="Presentation__actions">
                     <a href="#projects" className="button view-projects">View my projects</a>

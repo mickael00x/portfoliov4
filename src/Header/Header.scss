@@ -119,17 +119,22 @@
         text-decoration: none;
         font-size: 1.6rem;
         margin-left: 2rem;
+        transition: all .3s;
         @media screen and (max-width: 1077px) {
             font-size: 1.4rem;
         }
 
-@mixin delayed {
-    @for $i from 1 through 20 {
-        &:nth-child(#{$i}) {
-            animation-delay: #{$i * 200ms};
+        &:hover {
+            opacity: .5;
         }
-    }  
-}
+
+        @mixin delayed {
+            @for $i from 1 through 20 {
+                &:nth-child(#{$i}) {
+                    animation-delay: #{$i * 200ms};
+                }
+            }  
+        }
 
         &.mobile {
             @media screen and (max-width: 940px) {

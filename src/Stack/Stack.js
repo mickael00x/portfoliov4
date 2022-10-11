@@ -132,7 +132,7 @@ const Stack = () => {
         <div id="stack" className="stack section">
             <div className="stack__lines"></div>
             <div className="stack__title">Software, technologies & tools I use</div>
-            <div className="stack__subtitle">Click on element to view associtated projects made with ❤️</div>
+            <div className="stack__subtitle">Click on element to view associated projects made with ❤️</div>
             <div className="stack__container">
                 <div className="stack__list">
                     { stacks && stacks.map((stack, index) => (
