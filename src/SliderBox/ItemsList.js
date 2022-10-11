@@ -1,0 +1,57 @@
+export const items = [
+    {
+        id:0,
+        title: "IRCAD",
+        description: "IRCAD, innovation & excellence for surgery",
+        tags: ["WordPress", "Custom CRM"],
+        date: new Date(),
+        link: "https://www.ircad.fr",
+        imageSrc: "./img/projects/IRCAD.jpg",
+    },
+    {
+        id:1,
+        title: "StravaApp",
+        description: "Gathering Strava API to display statistics",
+        tags: ["ReactJS", "API"],
+        date: new Date(),
+        link: "https://strava-api.surge.sh/",
+        imageSrc: "./img/projects/StravaAPI.jpg",
+    },
+    {
+        id:2,
+        title: "WebSurg",
+        description: "Online university of IRCAD, for surgeons",
+        tags: ["PHP", "Symfony", "WebDesign"],
+        date: new Date(),
+        link: "https://www.websurg.com",
+        imageSrc: "./img/projects/WebSurg.jpg",
+    },
+    {
+        id:3,
+        title: "Eurospine",
+        description: "Book your event and register online",
+        tags: ["WordPress", "CustomTheme", "WebDesign"],
+        date: new Date(),
+        link: "https://registration.ircad.fr",
+        imageSrc: "./img/projects/Eurospine.jpg",
+    },
+    {
+        id:4,
+        title: "Password Generator",
+        description: "Generate a random password with your preferences",
+        tags: ["JS vanilla", "WebDesign"],
+        date: new Date(),
+        link: "https://password-suggestion.surge.sh",
+        imageSrc: "./img/projects/PasswordGenerator.jpg",
+    },
+    {
+        id:5,
+        title: "RealTime message",
+        description: "Small Discord-like!",
+        tags: ["JS vanilla"],
+        date: new Date(),
+        link: "http://message-app.surge.sh/",
+        imageSrc: "./img/projects/RealtimeMessageApp.jpg",
+    }
+    
+]

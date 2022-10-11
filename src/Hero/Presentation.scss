@@ -1,0 +1,308 @@
+
+.Presentation {
+    position: relative;
+    height: 100vh;
+    padding: 0rem 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    color: $dark-bg;
+    background-color: white;
+    z-index: 0;
+    
+    @media screen and (max-width: 640px) {
+        padding: 0rem 2rem;
+    }
+    
+    &__scrollDown {
+        z-index: 1;
+        position: absolute;
+        bottom: -7.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 15rem;
+        & > .circle {
+            border-radius: 100%;
+            border: 1px dashed $purple;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotation 5s infinite linear;
+            
+            &:nth-child(1) {
+                width: 5rem;
+                height: 5rem;
+                border-top: 0;
+                @media screen and (max-width: 640px) {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+            &:nth-child(2) {
+                width: 10rem;
+                height: 10rem;
+                border-bottom: 0;
+                @media screen and (max-width: 640px) {
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+            &:nth-child(3) {
+                width: 15rem;
+                height: 15rem;
+                border-top: 0;
+                @media screen and (max-width: 640px) {
+                    width: 7.5rem;
+                    height: 7.5rem;
+                }
+            }
+        }
+        &::before {
+            position: absolute;
+            top: -5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.3rem;
+            color: $purple;
+            width: max-content;
+            content: "Scroll down for more";
+            @media screen and (max-width: 640px) {
+                top: 1rem;
+            }
+        }
+    }
+    
+    &__background {
+        z-index: -1;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        transition: all .3s;
+        background: linear-gradient(to bottom, #ffffff, #a7daff);
+        background: -webkit-linear-gradient(to bottom, #ffffff, #a7daff);
+        & > .round {
+            position: absolute;
+            height: 30rem; width: 30rem;
+            filter: blur(50px);
+            -webkit-filter: blur(50px);
+            // backdrop-filter: blur(50px);
+            // -webkit-backdrop-filter: blur(50px);
+            border-radius: 100%;
+            background: linear-gradient(to right, #41fdc8, #40adf0);
+            background: -webkit-linear-gradient(to right, #41fdc8, #40adf0);
+
+            &:nth-child(1) {
+                right: 2rem;
+                bottom: 2rem;
+            }
+            &:nth-child(2) {
+                right: 2rem;
+                bottom: 40rem;
+            }
+            &:nth-child(3) {
+                left: 2rem;
+                bottom: 2rem;
+            }
+            &:nth-child(4) {
+                right: 50rem;
+                bottom: 10rem;
+            }
+            &:nth-child(odd) {
+                background: linear-gradient(80deg, #005d96 , #d04fff);
+                background: -webkit-linear-gradient(80deg, #005d96 , #d04fff);
+                animation: movingObjects 10s infinite linear both;
+            }
+            &:nth-child(even) {
+                animation: movingObjects2 10s infinite linear both;
+            }
+        }
+    }
+
+    
+
+    &__box {
+        width: 100%;
+        max-width: 80vw;
+        max-height: 60rem;
+        padding: 8rem 6rem;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.375);
+        box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+        border-radius: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        @media screen and (max-width: 940px) {
+            padding: 4rem;
+            text-align: center;
+        }
+        @media screen and (max-width: 640px) {
+            padding: 3rem;
+        }
+    }
+    &__header {
+        font-size: 5rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        
+        @media screen and (max-width: 1000px) {
+            font-size: 3.5rem;
+            line-height: 1;
+        } 
+        @media screen and (max-width: 640px) {
+            font-size: 3rem;
+            line-height: 1;
+        } 
+    }
+    &__text {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 5rem;
+        @media screen and (max-width: 940px) {
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            margin-bottom: 3rem;
+        } 
+    }
+    &__actions {
+        display: flex;
+        align-items: center;
+        
+        @media screen and (max-width: 940px) {
+            flex-direction: column;
+        } 
+        
+    }
+    &__gits {
+        display: flex;
+        margin-left: 5rem;
+        align-items: center;
+        height: 100%;
+        
+        & > a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 1.6rem;
+            transition: all .3s;
+            margin-right: 3rem;
+            @media screen and (max-width: 940px) {
+                margin-top: 3rem;
+            }
+            @media screen and (max-width: 640px) {
+                display: none;
+            }
+            
+            &:hover {
+                opacity: .5;
+            }
+            & > svg {
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+.subtitle {
+    position: relative;
+    white-space: nowrap;
+    margin-top: 3rem;
+    width: 1129.62px;
+    overflow: hidden;
+    border-right: 5px solid rgba(255,255,255,.75);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-box-sizing:content-box;
+    box-sizing:content-box;
+    font-weight: 900;
+    background-image: linear-gradient(to right, $blueprint , $purple-lighter );
+    background-image: -webkit-linear-gradient(to right, $blueprint , $purple-lighter);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media screen and (max-width: 940px) {
+        display: none;
+    }
+}
+.heading-subtitle {
+    width: 0;
+    @media screen and (max-width: 640px) {
+        font-size: 2.3rem;
+    }
+}
+
+.animate-subtitle {
+    animation: animateWidth 3s ease-in forwards;
+}
+
+@keyframes animateWidth {
+    0% {
+        width: 0%;
+        white-space: nowrap;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.heading-subtitle-mobile {
+    display: none;
+    background: linear-gradient(to right, $blueprint 0%,  $purple 100%);
+    background: -webkit-linear-gradient(to right, $blueprint 0%,  $purple 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    @media screen and (max-width: 940px) {
+        display: block;
+    }
+}
+
+
+.view-projects {
+    margin-right: 2rem;
+    @media screen and (max-width: 940px) {
+        margin-right: 0rem;
+    }
+}
+
+.button {
+    background-color: $blueprint;
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border: 1px solid $blueprint;
+    color: white;
+    transition: all .3s cubic-bezier(0.65, 0.84, 0.44, .5);
+    border-radius: 500px;
+
+    @media screen and (max-width: 940px) {
+        margin-top: 1rem;
+    }
+    @media screen and (max-width: 640px) {
+        font-size: 1.5rem
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: $blueprint;
+    }
+    &-outline {
+        background-color: transparent;
+        color: $purple;
+        border: 1px solid $purple;
+        &:hover {
+            background-color: $purple;
+            color: white;
+        }
+    }
+}
+
+
+  
+  

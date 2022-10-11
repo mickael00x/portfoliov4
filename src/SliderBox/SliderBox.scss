@@ -1,0 +1,66 @@
+.SliderBox {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem 2rem;
+    max-width: 100%;
+    width: 100%;
+    background-color: hsl(0, 0%, 91%);
+    & > h2 {
+        font-size: 5rem;
+        margin-bottom: 3rem;
+        @media screen and (max-width: 640px) {
+            font-size: 3rem;
+        }
+    }
+    &__box {
+        display: flex;
+        overflow: hidden;
+        max-width: 100%;
+        margin: 0 7rem;
+    }
+
+    &__prev, &__next {
+        font-size: 4rem;
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, 50%);
+        cursor: pointer;
+        transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        &:hover {
+            color: $blueprint;
+        }
+    }
+    &__prev {
+        left: 3rem;
+        transition: all .3s;
+        transform-origin: center;
+        @media screen and (max-width: 640px) {
+            left: 1rem;
+        }
+        
+    }
+    &__next {
+        right: 3rem;
+        transition: all .3s;
+        transform-origin: center;
+        @media screen and (max-width: 640px) {
+            right: 1rem;
+        }
+        
+    }
+
+
+}
+[class*="SliderBox__prev 1"], [class*="SliderBox__prev 0"] {
+    opacity: .3;
+    cursor: not-allowed;
+}
+[class*="SliderBox__next 5"] {
+    opacity: .3;
+    cursor: not-allowed;     
+}

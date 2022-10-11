@@ -1,0 +1,113 @@
+.AboutMe {
+    width: 100vw;
+    height: 150rem;
+    position: relative;
+    overflow-Y: scroll !important;
+
+    & > * {
+        z-index: 1;
+    }
+    @media screen and (max-width: 640px) {
+        // height: 200rem;
+    }
+
+    &__img {
+        position: absolute;
+        top: 10rem;
+        width: 100%;   
+        @media screen and (max-width: 640px) {
+            top: 50rem;
+            // height: 100%;
+            // object-fit: cover;
+        }
+    }
+    &__content {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        max-width: 60%;
+        height: 100vh;
+        @media screen and (max-width: 640px) {
+            width: 80%;
+
+        }
+        text-align: center;
+        margin: 0 auto;
+
+        & > h2 {
+            font-size: 5rem;
+            @media screen and (max-width: 640px) {
+                font-size: 3rem;
+            }
+        }
+        & > p {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            @media screen and (max-width: 640px) {
+                font-size: 1.2rem;
+            }
+        }
+        & > .button {
+            width: max-content;
+        }
+        & > .malt {
+            margin-top: 2rem;
+            & > img {
+                height: 20px;
+                margin-left: 1rem;
+            }
+
+            display: flex; 
+            align-items: center;
+            color: salmon;
+            text-decoration: none;
+            font-size: 1.6rem;
+            transition: all .3s;
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+    &__blurredbg {
+        position: absolute;
+        z-index: 0;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%; height: 50rem;
+        border-radius: 500rem;
+        background: linear-gradient(90deg, $purple, #fb973f);
+        background: -webkit-linear-gradient(90deg, $purple, #fb973f);
+        filter: blur(100px);
+        -webkit-filter: blur(100px);
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+    }
+
+}
+
+.opacity-0 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fadedIn {
+    animation: fadeInBlurred 2s 1s forwards;
+}
+
+.showInWithBlur {
+    animation: fadeInBlurred 2s forwards;
+}
+
+
+.darker {
+    background-color: $dark-bg;
+    transition: all 5s;
+}
+

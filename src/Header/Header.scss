@@ -1,0 +1,146 @@
+
+.Header {
+    position: fixed;
+    top: 2rem;
+    left: 25%;
+    width: calc(50vw - 4rem);
+    margin: 0 2rem;
+    height: 50px;
+    display: flex;
+    padding: 0 3rem;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10rem;
+    color: white;
+    z-index: 99;
+ 
+    &.mobile {
+        padding: 0;
+        z-index: 1000;
+    }
+    
+    @media screen and (max-width: 940px) {
+        padding: 0 2rem;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+        width: 100vw;
+    }
+
+    &__backToTop {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateX(0);
+        cursor: pointer;
+        color: $less-dark-bg;
+        text-decoration: none;
+        z-index: 0;
+
+        &:hover svg {
+            color: $blueprint;
+        }
+        & > svg {
+            transition: all .3s;
+            font-size: 4rem;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @media screen and (max-width: 940px) {
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+            flex-direction: column;
+            align-items: flex-start;
+            display: flex;
+            padding: 5rem;
+        }
+        &.mobile {
+            @media screen and (min-width: 940px) {
+                display: none;
+            }   
+            opacity: 1;
+            visibility: visible;
+            position: fixed;
+            justify-content: space-around;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 888;
+            background-color: $less-dark-bg;
+            color: white;
+            animation: growIn .5s cubic-bezier(0,-0.01,.44,-0.03);
+        }
+    }
+    &__logo {
+        max-width: 4rem;
+        margin-top: -1rem;
+    }
+    &__item {
+        @media screen and (max-width: 940px) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5rem;             
+        }
+    }
+    &__hamburger {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: 889;
+        top: 2rem;
+        left: 2rem;
+        @media screen and (max-width: 940px) {
+            opacity: 1;
+            visibility: visible;
+        }
+        &--line {
+            height: 3px;
+            border-radius: 20%;
+            width: 2rem;
+            background-color: white;
+            box-shadow: 0 3px 6px rgba(0,0,0,.5);
+
+            &:not(:first-child) {
+                margin-top: .4rem;
+            }
+        }
+    }
+    &__link {
+        color: inherit;
+        text-decoration: none;
+        font-size: 1.6rem;
+        margin-left: 2rem;
+        @media screen and (max-width: 1077px) {
+            font-size: 1.4rem;
+        }
+
+@mixin delayed {
+    @for $i from 1 through 20 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{$i * 200ms};
+        }
+    }  
+}
+
+        &.mobile {
+            @media screen and (max-width: 940px) {
+                font-size: 3rem;
+                margin-left: 0rem;
+                font-weight: 800;
+                visibility: hidden;
+                opacity: 0;
+                animation: fadeInTop 1s forwards;
+                @include delayed;
+            }
+        }
+    }
+}

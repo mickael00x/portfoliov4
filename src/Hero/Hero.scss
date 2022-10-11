@@ -1,0 +1,58 @@
+.Hero {
+    position: relative;
+    max-width: 100vw;
+    background-color: $dark-bg;
+    color: white;
+    height: 100vh;
+    z-index: 2;
+    // &__video {
+    //     position: absolute;
+    //     top: 0; left: 0;
+    //     animation: fadeOutBlur 1s 10s cubic-bezier(0.075, 0.82, 0.165, .2) forwards;
+    //     width: 100%;
+    //     max-height: 100vh;
+    //     object-fit: cover;
+    //     z-index: 1000;
+        
+    //     @media screen and (max-width: 640px) {
+    //         height: 100vh;
+    //     }
+    // }
+
+    &__content {
+        position: absolute;
+        top: 50%; left: 50%;
+        z-index: 3;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 9rem;
+        font-weight: 700;
+        background-color: $dark-bg;
+        text-align: center;
+        opacity: 0;
+
+        @media screen and (max-width: 640px) {
+            font-size:3rem;
+        }
+    }
+    &__content1 {
+        animation: fadeInThenOut 3s 1s linear forwards;
+    }
+    &__content2 {
+        animation: fadeInThenOut 3s 4s linear forwards;
+    }
+    &__content3 {
+        animation: fadeInThenOut 3s 7s linear forwards;
+    }
+    &__presentation_box {
+        opacity: 0;
+        animation: fadeInGrow 2s 10s linear forwards;
+    }
+    
+}
+
+

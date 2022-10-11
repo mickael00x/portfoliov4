@@ -1,0 +1,28 @@
+.Footer {
+    background-color: $dark-bg;
+    padding: 3rem 7rem;
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #595959;
+    &__box {
+
+    }
+    &__text {
+
+    }
+    &__icons {
+        margin-top: 1rem;
+        & > svg:first-child {
+            margin-right: 1rem;
+            color: #61dafb;
+        }
+        & > svg:last-child {
+            color: #bf4080;
+        }
+        & > svg {
+            font-size: 3rem;
+        }
+    }
+}

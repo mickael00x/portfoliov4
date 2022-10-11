@@ -1,0 +1,90 @@
+.Contact {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 777;
+    $color1: $purple;
+    $color2: #1F3944;
+    $color3: white;
+
+    &__mail {
+        border-radius: 1000px;
+        padding: 1rem 1.7rem;
+        font-size: 2rem;
+        position: absolute;
+        
+        bottom: 2rem;
+        left: 3rem;
+        width: max-content;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform:translate3d(0,0,0);
+        transform:translate3d(0,0,0);
+        color: $blueprint;
+        text-decoration: none;
+        border: 2px solid $blueprint;
+        border-radius: 4px;
+        padding: 2rem 3rem;
+        transition: 0.3s ease-in-out;
+        
+        span {
+            text-transform: none;
+            position: absolute;
+            color: white;
+            top: 20px;
+            left: 30px;
+            opacity: 0;
+            transition: all 0s ease 0s;
+        }
+        &:hover {
+            transition: 0.3s ease-in-out;
+            border: 2px solid white;
+            border-radius: 50px;
+            background-color: $blueprint;
+            
+            &>span {
+                opacity: 1;
+                transition: all 0.25s ease-in-out 0.1s;
+            }
+            
+            &:before {
+                transition: 0.3s ease-in-out;
+                background-color: $color1;
+            }
+        }
+        
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -12px;
+            width: 140px;
+            height: 30px;
+        }
+        &:before {
+            border: 2px solid $color1;
+            background-color: $purple;
+            transform: skew(-25deg);
+            transition: 0.3s ease-in-out;
+        }
+        
+        &:after {
+            content: "Available for work";
+            font-size: 1.5rem;
+            top: -16px;
+            left: 0px;
+            color: white;
+        }
+            
+        & > svg {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+            margin-left: 1rem;
+        }
+    }
+    
+}

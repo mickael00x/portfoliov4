@@ -1,0 +1,99 @@
+.Contact2 {
+    position: relative;
+    
+    background-color: $dark-bg;
+    color: white;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    padding: 12rem 7rem;
+
+    @media screen and (max-width: 640px) {
+        flex-direction: column;
+        padding: 12rem 7rem;
+    }
+
+    & > * {
+        z-index: 1;
+    }
+    &__box:first-child {
+        flex: 0 0 70%;
+        max-width: 70%;
+        @media screen and (max-width: 640px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    &__box:last-child {
+        flex: 0 0 30%;
+        max-width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 640px) {
+            margin-top: 4rem;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    &__title {
+        font-size: 5rem;
+        font-weight: 700;
+        @media screen and (max-width: 1077px) {
+            font-size: 3.5rem;
+        }
+        @media screen and (max-width: 640px) {
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+    &__content {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        @media screen and (max-width: 640px) {
+            margin-top: 2rem;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+    }
+    &__button {
+        margin: 0 auto;
+    }
+    &__bluredbg {
+        position: absolute;
+        z-index: 0;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%; height: 100%;
+        border-radius: 500rem;
+        background: -webkit-linear-gradient(90deg,  rgba(214, 104, 248, .99), rgba(124, 22, 248, .99));
+        background: linear-gradient(90deg,  rgba(214, 104, 248, .99), rgba(124, 22, 248, .99));
+        filter: blur(100px);
+        -webkit-filter: blur(100px);
+        // backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+    }
+    &__rectangle {
+        z-index: 0;
+        position: absolute;
+        bottom: 30%;
+        left: 10rem;
+        background-image: url("../../public/img/rectangle-small.png");
+        background-repeat: repeat;
+        width: 30rem;
+        height: 20rem;
+    }
+    &__rectangle-2 {
+        z-index: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-image: url("../../public/img/rectangle-small.png");
+        background-repeat: repeat;
+        background-size: auto;
+        width: 60rem;
+        height: 100%;
+        background-color: transparent;
+    }   
+}

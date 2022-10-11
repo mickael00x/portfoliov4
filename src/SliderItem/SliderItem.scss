@@ -1,0 +1,109 @@
+.SliderItem {
+    position: relative;
+    display: flex;
+    
+    flex: 0 0 calc(50% - 2rem);
+    max-width: calc(50% - 2rem);    
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+    background-color: white;
+    margin: 1rem;
+    border: 1px solid $border;
+    @media screen and (max-width: 800px) {
+        flex: 0 0 calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
+    }
+    
+    @media screen and (min-width: 1600px) {
+        flex: 0 0 calc(33% - 1rem);
+        max-width: calc(33% - 1rem);
+    }
+
+    & > * {
+        z-index: 2;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    &__description {
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    &__tags {
+        display: flex;
+        align-items: center;
+        z-index: 100;
+        margin: 1rem 0;
+        & > span {
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            color: #707070;
+            @media screen and (max-width: 640px) {
+                font-size: 1rem;
+            }
+        }
+       
+        &__tag {
+            margin-right: .5rem;
+            font-size: 1.5rem;
+            color: #1D1D1D;
+            border: 1px solid #1D1D1D;
+            border-radius: 500px;
+            padding: .5rem 1rem;
+            transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1); 
+            @media screen and (max-width: 640px) {
+                font-size: 1.2rem;
+            }           
+        }
+    }
+
+    
+    &__button {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        border-radius: 500rem;
+        padding: .6rem 1.7rem;
+        border: none;
+        background-color: transparent;
+        color: white;
+        animation: halo 2s infinite;
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+        @media screen and (max-width: 640px) {
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.6rem;
+        }
+        &:hover {
+            color: $blueprint;
+            background-color: transparent;
+        }
+        text-decoration: none;
+        color: inherit;
+        font-size: 2.5rem;
+        font-weight: 400;
+        @media screen and (max-width: 640px) {
+         
+        }
+    }
+    
+    &__img {
+        width: auto;
+        z-index: 2;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+        @media screen and (max-width: 640px) {
+            height: 200px;    
+        }
+        @media screen and (min-width: 1600px) {
+            height: 600px;
+        }
+    }
+}

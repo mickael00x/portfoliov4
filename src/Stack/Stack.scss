@@ -1,0 +1,149 @@
+.stack {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 7rem;
+    background-color: white;
+    position: relative;
+
+    & > * {
+        z-index: 1;
+    }
+    @media screen and (max-width: 640px) {
+        padding: 2rem;
+    }
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__title {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        text-align: center;
+        @media screen and (max-width: 640px) {
+            font-size: 3rem;
+        }
+    }
+    &__subtitle {
+        font-size: 1.7rem;
+        text-align: center;
+        @media screen and (max-width: 640px) {
+            font-size: 1.2rem;
+        }
+    }
+    &__list {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+    }
+
+    @mixin transition {
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                transition: all #{$i * 200}ms ease-in;
+            }
+        }  
+    }
+
+    &__item {
+        border: 1px solid #D7D7D7;
+        background-color: white;
+        color: var(--bg-dark);
+        border-radius: 100rem;
+        display: flex;
+        min-width: max-content;
+        justify-content: center;
+        align-items: center;
+        margin: .5rem;
+        font-size: 1.9rem;
+        text-decoration: none;
+        transition: all 1s;
+        z-index: 1;
+        //@include transition;
+        @media screen and (max-width: 640px) {
+            font-size: 1.4rem;
+        }
+        
+        &:hover {
+            border: 1px solid $blueprint;
+            background-color: rgba($blueprint, .1) ;
+        }
+        &:first-child {
+            &::before {
+                content: "Click me!";
+                position: absolute; 
+                font-size: 1.5rem;
+                top: -3rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            animation: jumping 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
+    &__img {
+        padding: 0 1.5rem;
+        @media screen and (max-width: 640px) {
+            height: 20px;
+            padding: 0 .5rem;
+        }
+    }
+    &__texts {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        border-right: 1px solid #D7D7D7;
+        padding: 0 1rem;
+    }
+    &__texts > div:not(:first-child) {
+        color: #989898;
+        font-weight: 400;
+        font-size: 1.2rem;
+        @media screen and (max-width: 640px) {
+            font-size: 1rem;
+        }
+    }
+    
+    &__tag {
+        color: $blueprint;
+        padding: 1rem 1.5rem;
+        font-size: 1.3rem;
+        @media screen and (max-width: 640px) {
+            font-size: 1.2rem;
+        }
+    }
+    &__lines {
+        z-index: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-image: url("../../public/img/small-lines.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100%;
+        background-color: transparent;
+        @media screen and (max-width: 640px) {
+            background-size: contain;
+        }
+    }
+}
+
+@keyframes jumping {
+    0% {
+        transform: translateY(0rem);
+    }
+    25% {
+        transform: translateY(-1rem);
+    }
+    50% {
+        transform: translateY(.1rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
