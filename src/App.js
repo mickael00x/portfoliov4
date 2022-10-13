@@ -10,30 +10,42 @@ import AboutMe from './aboutMe/AboutMe';
 import GraphicDesign from './GraphicDesign/GraphicDesign';
 import Contact2 from './contact2/Contact2';
 import Footer from './Footer/Footer';
-
+import Box from './utilities/Box';
+import ColorMode from './toggleColorMode/ColorMode';
+import theme from './theme';
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState(theme.defaultTheme);
+  const handleColorMode = () => { currentTheme === "dark" ? setCurrentTheme("light") : setCurrentTheme("dark"); }
 
+  const [isLoaded, setIsLoaded] = useState(false);
+  const styles = {
+    backgroundColor: theme[currentTheme].bg,
+    color: theme[currentTheme].color
+  }
+  
   useEffect(() => {
     window.addEventListener('load', () => {
       return setIsLoaded(true);
     });
-  }, [])
+  }, [isLoaded])
   
   if(isLoaded) {
     return (
-      <div className="App">
-        <Header />
-        <Contact />
-        <Hero />
-        <SliderBox />
-        <Contact2 />
-        <GraphicDesign />
-        <Stack />
-        <AboutMe />
-        <Footer />
-      </div>
+        <div className="App" style={styles}>
+          <ColorMode handleColorMode={handleColorMode} currentTheme={currentTheme} />
+          <Box currentTheme={currentTheme}>
+            <Header />
+            <Contact />
+            <Hero />
+            <SliderBox />
+            <Contact2 />
+            <GraphicDesign />
+            <Stack />
+            <AboutMe />
+            <Footer />
+          </Box>
+        </div>
     );
   } else {
     return (

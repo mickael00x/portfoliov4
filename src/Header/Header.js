@@ -1,14 +1,15 @@
+
 import BackToTop from "./BackToTop";
 
 const Header = () => {
     const handleClick = (e) => {
         if (window.matchMedia("(max-width: 940px)").matches) {          
-        let headerContainer = document.querySelector(".Header");
-        let itemContainer = document.querySelector(".Header__list");
-        let items = document.querySelectorAll(".Header__link");
-        headerContainer.classList.toggle("mobile")
-        itemContainer.classList.toggle("mobile")
-        items.forEach(i => i.classList.toggle("mobile"));
+            let headerContainer = document.querySelector(".Header");
+            let itemContainer = document.querySelector(".Header__list");
+            let items = document.querySelectorAll(".Header__link");
+            headerContainer.classList.toggle("mobile")
+            itemContainer.classList.toggle("mobile")
+            items.forEach(i => i.classList.toggle("mobile"));
         } 
     }
 
@@ -29,6 +30,7 @@ const Header = () => {
                     <a onClick={handleClick} href="#AboutMe" className="Header__link">About Me</a>
                 </div>
             </div>
+            
         </header>
     )
 }
