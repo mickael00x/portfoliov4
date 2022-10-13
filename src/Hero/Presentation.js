@@ -19,12 +19,7 @@ const Presentation = () => {
 
     return (
         <section id="top" className="Presentation section">
-            <div className="Presentation__background">
-                <div className="round"></div>
-                <div className="round"></div>
-                <div className="round"></div>
-                <div className="round"></div>
-            </div>
+            
             <div className="Presentation__box">
                 <h1 className="Presentation__header heading-primary">Self taught developer<br/>
                         <div className="heading-subtitle subtitle"> with high sensitivity for UI/UX</div>
@@ -52,6 +47,12 @@ const Presentation = () => {
                 <div className="circle"></div>
                 <div className="circle"></div>
                 <div className="circle"></div>
+            </div>
+            <div className="Presentation__background">
+                <div className="round"></div>
+                <div className="round"></div>
+                <div className="round"></div>
+                <div className="round"></div>
             </div>
         </section>
     );

@@ -8,8 +8,8 @@ const Stack = () => {
     [{
         name: "Javascript", 
         date: "Since 2018",
-        tag: "#coding"
-        
+        tag: "#coding",
+        link: "https://www.google.com"
     }, 
     {
         name: "React", 
@@ -25,29 +25,32 @@ const Stack = () => {
     {
         name: "WordPress",
         date: "Since 2018",
-        tag: "#customTheme"
+        tag: "#customTheme",
+        link: "https://couretjardin.fr"
     }, 
     {
         name: "Elementor",
         date: "Since 2019",
-        tag: "#customTheme"
+        tag: "#customTheme",
+        link: "https://www.ircad.fr"
     },
     {
         name: "PHP",
         date: "Since 2018",
-        tag: "#webDeveloppement"
+        tag: "#webDeveloppement",
+        link: "https://www.ircad.fr/mis-training-center/course-calendar/"
     },
     {
         name: "Figma", 
         date: "Since 2020",
-        tag: "#graphicDesign"
-        
+        tag: "#graphicDesign",
+        link: "https://www.figma.com/file/wAL4lKdx4NO1gJ63bF6cJ9/maquette"
     }, 
     {
         name: "iTerm", 
         date: "Since 2019",
-        tag: "#tool"
-        
+        tag: "#tool",
+        link: "https://github.com/mickael00x/.zshrc"
     }, 
     {
         name: "Symfony", 
@@ -113,7 +116,7 @@ const Stack = () => {
         name: "QMK", 
         date: "Since 2021",
         tag: "#customKeyboard"
-    
+        
     }, 
     {
         name: "Arduino", 
