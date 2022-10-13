@@ -85,26 +85,26 @@
         height: 100%;
         background: linear-gradient(to bottom, #ffffff, #a7daff);
         background: -webkit-linear-gradient(to bottom, #ffffff, #a7daff);
-        
-        &:hover .round:nth-child(1) {
-            right: +50%;
-            bottom: 2rem;
+        &:hover .round {
             height: 50rem; width: 50rem;
+        }
+        &:hover .round:nth-child(1) {
+            //violet
+            left: +50%;
+            top: 2rem;
         }
         &:hover .round:nth-child(2) {
-            right: +50%;
-            bottom: +30%;
-            height: 50rem; width: 50rem;
+            right: 2rem;
+            top: +50%;
         }
         &:hover .round:nth-child(3) {
-            left: 2rem;
-            bottom: +50%;
-            height: 50rem; width: 50rem;
+            //violet
+            right: +50%;
+            bottom: 2rem;
         }
         &:hover .round:nth-child(4) {
-            right: 2rem;
-            bottom: 2rem;
-            height: 50rem; width: 50rem;
+            left: 2rem;
+            bottom: +50%;
         }
         & > .round {
             position: absolute;
@@ -119,20 +119,22 @@
             transition: all 2s cubic-bezier(1,-0.3,0,1.18);
 
             &:nth-child(1) {
-                right: 2rem;
-                bottom: 2rem;
+                //violet
+                left: 2rem;
+                top: 2rem;
             }
             &:nth-child(2) {
                 right: 2rem;
-                bottom: 40rem;
+                top: 2rem;
             }
             &:nth-child(3) {
-                left: 2rem;
+                //violet
+                right: 2rem;
                 bottom: 2rem;
             }
             &:nth-child(4) {
-                right: 50rem;
-                bottom: 10rem;
+                left: 2rem;
+                bottom: 2rem;
             }
             &:nth-child(odd) {
                 background: linear-gradient(80deg, #005d96 , #d04fff);
