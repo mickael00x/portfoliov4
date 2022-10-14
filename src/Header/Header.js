@@ -1,4 +1,3 @@
-
 import BackToTop from "./BackToTop";
 
 const Header = () => {
@@ -30,7 +29,6 @@ const Header = () => {
                     <a onClick={handleClick} href="#AboutMe" className="Header__link">About Me</a>
                 </div>
             </div>
-            
         </header>
     )
 }

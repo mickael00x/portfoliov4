@@ -10,18 +10,18 @@ import AboutMe from './aboutMe/AboutMe';
 import GraphicDesign from './GraphicDesign/GraphicDesign';
 import Contact2 from './contact2/Contact2';
 import Footer from './Footer/Footer';
-import Box from './utilities/Box';
-import ColorMode from './toggleColorMode/ColorMode';
-import theme from './theme';
+import useDarkMode from './customHook/useDarkMode';
+import config from './config';
+import ToggleColorMode from './Header/ToggleColorMode';
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState(theme.defaultTheme);
-  const handleColorMode = () => { currentTheme === "dark" ? setCurrentTheme("light") : setCurrentTheme("dark"); }
-
   const [isLoaded, setIsLoaded] = useState(false);
+  
+  const {theme, toggleTheme} = useDarkMode();
+  
   const styles = {
-    backgroundColor: theme[currentTheme].bg,
-    color: theme[currentTheme].color
+    backgroundColor: config[theme].bg,
+    color: config[theme].color
   }
   
   useEffect(() => {
@@ -32,9 +32,8 @@ function App() {
   
   if(isLoaded) {
     return (
-        <div className="App" style={styles}>
-          <ColorMode handleColorMode={handleColorMode} currentTheme={currentTheme} />
-          <Box currentTheme={currentTheme}>
+        <div className={"App " + theme} style={styles}>
+            <ToggleColorMode toggleTheme={toggleTheme} theme={theme} />
             <Header />
             <Contact />
             <Hero />
@@ -44,7 +43,6 @@ function App() {
             <Stack />
             <AboutMe />
             <Footer />
-          </Box>
         </div>
     );
   } else {

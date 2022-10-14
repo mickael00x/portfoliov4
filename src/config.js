@@ -1,6 +1,6 @@
 
-const theme = {
-    defaultTheme: "dark",
+const config = {
+    defaultTheme: "light",
     light: {
         color: "#1D1D1D",
         bg: "#FAFAFA",
@@ -13,4 +13,4 @@ const theme = {
     },
 }
 
-export default theme;
+export default config;
