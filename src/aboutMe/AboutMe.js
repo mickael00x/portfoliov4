@@ -1,29 +1,16 @@
 import { useEffect } from "react";
-import { gsap, ScrollTrigger } from "gsap/all";
 
 const AboutMe = () => {
-    gsap.registerPlugin(ScrollTrigger);
+
 
     useEffect(() => {
         const aboutMeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 let container = entry.target;
-                let image = container.children[0];
                 let content = container.children[1];
                 if(entry.isIntersecting) {
-                    container.classList.add("darker");
                     content.classList.add("showInWithBlur");
-                    let tl = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: container,
-                            start: "top top",
-                            end: "bottom bottom",
-                            scrub: 1
-                        }
-                    });
-                    tl.fromTo(image, {scale:0, opacity: 1}, {scale:1, opacity: 0});
                 } else {
-                    container.classList.remove("darker");
                     content.classList.remove("showInWithBlur");
                 }
             })

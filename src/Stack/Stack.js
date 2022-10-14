@@ -134,7 +134,7 @@ const Stack = () => {
     return (
         <div id="stack" className="stack section">
             <div className="stack__lines"></div>
-            <div className="stack__title">Software, technologies & tools I use</div>
+            <h2 className="stack__title">Software, technologies & tools I use</h2>
             <div className="stack__subtitle">Click on element to view associated projects made with ❤️</div>
             <div className="stack__container">
                 <div className="stack__list">

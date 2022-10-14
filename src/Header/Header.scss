@@ -1,3 +1,36 @@
+button.colorMode {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    z-index: 20;
+    cursor: pointer;
+    transition: all .3s;
+    animation: fadeInBlurred 1s 4s ease-in forwards;
+    & > .moon {
+        border-radius: 1rem;
+        padding: 1rem;
+        font-size: 4.5rem;
+        color: #706d6d;
+        transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:hover {
+            background-color: rgba($dark-bg, .5);
+            color: rgb(244, 239, 99);
+        }
+    }
+    & > .sun {
+        border-radius: 1rem;
+        padding: 1rem;
+        font-size: 4.5rem;
+        color: rgb(255, 187, 0);
+        transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:hover {
+            background-color: rgba($dark-bg, .5);
+            color: white;
+        }
+    }
+}
 
 .Header {
     position: fixed;
@@ -8,11 +41,16 @@
     height: 50px;
     display: flex;
     padding: 0 3rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     border: 1px solid #D7D7D7;
-    border-radius: 10rem;
-    z-index: 99;
- 
+    border-radius: 100rem;
+    z-index: 20;
+    &.dark {
+        background-color: #F2F2F2;
+        color: $dark-bg;
+        border: 1px solid #D7D7D7;
+    }
     &.mobile {
         padding: 0;
         z-index: 1000;

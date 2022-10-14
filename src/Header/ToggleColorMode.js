@@ -6,7 +6,7 @@ const ToggleColorMode = ({toggleTheme, theme}) => {
 
     return (
         <button onClick={toggleTheme} className="colorMode">
-            { theme && theme === "dark" ? <BsFillSunFill /> : <BsMoonFill />  }
+            { theme && theme === "dark" ? <BsFillSunFill className="sun"/> : <BsMoonFill className="moon"/>  }
         </button>
     )
 }

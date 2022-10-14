@@ -1,46 +1,27 @@
 .AboutMe {
     width: 100vw;
-    height: 150rem;
     position: relative;
-    overflow-Y: scroll !important;
-
-    & > * {
-        z-index: 1;
-    }
-    @media screen and (max-width: 640px) {
-        // height: 200rem;
-    }
-
+    display: flex;
+    padding: 20rem;
     &__img {
-        position: absolute;
-        top: 10rem;
-        width: 100%;   
-        @media screen and (max-width: 640px) {
-            top: 50rem;
-            // height: 100%;
-            // object-fit: cover;
-        }
+        width: 30rem;
+        height: 60rem; 
+        object-fit: cover;  
+        object-position: left;
     }
     &__content {
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+
         max-width: 60%;
-        height: 100vh;
         @media screen and (max-width: 640px) {
             width: 80%;
-
         }
-        text-align: center;
         margin: 0 auto;
 
         & > h2 {
-            font-size: 5rem;
+            width: min-content;
             @media screen and (max-width: 640px) {
                 font-size: 3rem;
             }
@@ -48,7 +29,7 @@
         & > p {
             font-size: 1.8rem;
             margin-bottom: 2rem;
-            text-align: center;
+
             @media screen and (max-width: 640px) {
                 font-size: 1.4rem;
             }
@@ -74,21 +55,6 @@
             }
         }
     }
-    &__blurredbg {
-        // position: absolute;
-        // z-index: 0;
-        // top: 50%; left: 50%;
-        // transform: translate(-50%, -50%);
-        // width: 100%; height: 50rem;
-        // border-radius: 500rem;
-        // background: linear-gradient(90deg, $purple, #fb973f);
-        // background: -webkit-linear-gradient(90deg, $purple, #fb973f);
-        // filter: blur(100px);
-        // -webkit-filter: blur(100px);
-        // backdrop-filter: blur(100px);
-        // -webkit-backdrop-filter: blur(100px);
-    }
-
 }
 
 .opacity-0 {
@@ -103,7 +69,6 @@
 .showInWithBlur {
     animation: fadeInBlurred 2s forwards;
 }
-
 
 .darker {
     background-color: #F6F6F6;

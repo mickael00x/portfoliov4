@@ -1,6 +1,6 @@
 import BackToTop from "./BackToTop";
 
-const Header = () => {
+const Header = ({theme}) => {
     const handleClick = (e) => {
         if (window.matchMedia("(max-width: 940px)").matches) {          
             let headerContainer = document.querySelector(".Header");
@@ -13,7 +13,7 @@ const Header = () => {
     }
 
     return (
-        <header className="Header">
+        <header className={"Header " + theme}>
             <BackToTop />
             <div className="Header__hamburger" onClick={handleClick}>
                 <div className="Header__hamburger--line"></div>

@@ -1,13 +1,12 @@
 .SliderItem {
     position: relative;
     display: flex;
-    
     flex: 0 0 calc(50% - 2rem);
     max-width: calc(50% - 2rem);    
     flex-direction: column;
     align-items: center;
     border-radius: 1.5rem;
-    background-color: white;
+    // background-color: white;
     margin: 1rem;
     border: 1px solid $border;
     @media screen and (max-width: 800px) {
@@ -41,7 +40,7 @@
         & > span {
             margin-right: 1rem;
             font-size: 1.2rem;
-            color: #707070;
+            // color: #707070;
             @media screen and (max-width: 640px) {
                 font-size: 1rem;
             }
@@ -50,7 +49,7 @@
         &__tag {
             margin-right: .5rem;
             font-size: 1.5rem;
-            color: #1D1D1D;
+            // color: #1D1D1D;
             border: 1px solid #1D1D1D;
             border-radius: 500px;
             padding: .5rem 1rem;

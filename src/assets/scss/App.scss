@@ -6,7 +6,6 @@
 @import "../../Loader/Loader.scss";
 @import "../../SliderBox/SliderBox.scss";
 @import "../../SliderItem/SliderItem.scss";
-@import "../../contact2/Contact2.scss";
 @import "../../contact/Contact.scss";
 @import "../../Hero/Hero.scss";
 @import "../../Hero/Presentation.scss";
@@ -25,7 +24,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: "Helvetica Now Display";
+    font-family: "Fira Code";
     position: relative;
     background-color: $light-bg;
     scroll-behavior: smooth;
@@ -35,8 +34,29 @@ html {
     width: 100%;
     height: 100%;
     animation: fadeIn 1s linear;
-    transition: all .3s ease-in;
     overflow-x: hidden;
+    
+}
+.App.light {
+    color-scheme: light;
+    transition: all 1s ease-in;
+}
+
+.App.dark {
+    color-scheme: dark;
+    background-color: $dark-bg;
+    color: white;
+    transition: all 1s ease-in;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins Bold";
+}
+h2 {
+    font-size: 8rem;
+    line-height: 8rem;
+    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 @mixin transition {
