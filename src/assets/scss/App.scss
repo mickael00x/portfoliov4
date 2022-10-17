@@ -82,3 +82,22 @@ h2 {
     visibility: visible;
     @include transition;
 }
+
+.opacity-0 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.fadedIn {
+    animation: fadeInBlurred 2s 1s forwards;
+}
+
+.showInWithBlur {
+    animation: fadeInBlurred 2s forwards;
+}
+
+.darker {
+    background-color: #F6F6F6;
+    transition: all 5s;
+}
+

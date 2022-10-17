@@ -153,14 +153,16 @@
   @keyframes fadeInBlurred {
     from {
         opacity: 0;
-        filter: blur(10px);
-        -webkit-filter: blur(10px);
+        filter: blur(1rem);
+        -webkit-filter: blur(1rem);
+        transform: translateY(-10rem);
         visibility: hidden;
     }
     to {
         opacity: 1;
         filter: blur(0);
         -webkit-filter: blur(0px);
+        transform: translateY(0);
         visibility: visible;
     }
 }
@@ -169,15 +171,10 @@
 @keyframes growIn {
     0% {
         width: 0;
-        transform: translateX(-50%) translateY(-50%);
-        background-size: 500%;
-        border-bottom-right-radius: 5000rem;
-        
     }
     100% {
         width: 100%;
-        transform: translateX(0) translateY(0);
-        background-size: 100%;
+        
     }
 }
 
@@ -190,7 +187,7 @@
     100% {
         transform: translateY(0);
         opacity: 1;
-        visibility:visible;
+        visibility: visible;
     }
 }
 

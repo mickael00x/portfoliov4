@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { FaGitlab, FaGithub } from "react-icons/fa";
+import { FaGitlab, FaGithub, FaArrowDown } from "react-icons/fa";
 
 const Presentation = ({theme}) => {
     useEffect(() => {
@@ -40,11 +40,12 @@ const Presentation = ({theme}) => {
                     </a>
                 </div>
             </div>
-            <div className="Presentation__scrollDown">
+            <a href="#stack" className="Presentation__scrollDown">
                 <div className="circle"></div>
                 <div className="circle"></div>
                 <div className="circle"></div>
-            </div>
+                <FaArrowDown />
+            </a>
             <div className={"Presentation__background " + theme}>
                 <div className="round"></div>
                 <div className="round"></div>

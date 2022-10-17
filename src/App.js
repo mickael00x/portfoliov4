@@ -7,7 +7,6 @@ import Contact from './contact/Contact';
 import Stack from './Stack/Stack';
 import Header from './Header/Header';
 import AboutMe from './aboutMe/AboutMe';
-import GraphicDesign from './GraphicDesign/GraphicDesign';
 import Footer from './Footer/Footer';
 import useDarkMode from './customHook/useDarkMode';
 import ToggleColorMode from './Header/ToggleColorMode';
@@ -29,9 +28,8 @@ function App() {
             <Header />
             <Contact />
             <Hero />
-            <SliderBox />
-            <GraphicDesign />
             <Stack />
+            <SliderBox />
             <AboutMe />
             <Footer />
         </div>

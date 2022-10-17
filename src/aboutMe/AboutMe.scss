@@ -2,18 +2,19 @@
     width: 100vw;
     position: relative;
     display: flex;
-    padding: 20rem;
+    
     &__img {
-        width: 30rem;
-        height: 60rem; 
+        position: absolute;
+        width: 100%; height: 100%; 
         object-fit: cover;  
-        object-position: left;
+        // object-position: left;
+        opacity: .05;
     }
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
+        padding: 10rem;
         max-width: 60%;
         @media screen and (max-width: 640px) {
             width: 80%;
@@ -55,23 +56,5 @@
             }
         }
     }
-}
-
-.opacity-0 {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.fadedIn {
-    animation: fadeInBlurred 2s 1s forwards;
-}
-
-.showInWithBlur {
-    animation: fadeInBlurred 2s forwards;
-}
-
-.darker {
-    background-color: #F6F6F6;
-    transition: all 5s;
 }
 

@@ -1,15 +1,18 @@
 import BackToTop from "./BackToTop";
 
 const Header = ({theme}) => {
+
     const handleClick = (e) => {
-        if (window.matchMedia("(max-width: 940px)").matches) {          
-            let headerContainer = document.querySelector(".Header");
-            let itemContainer = document.querySelector(".Header__list");
-            let items = document.querySelectorAll(".Header__link");
-            headerContainer.classList.toggle("mobile")
-            itemContainer.classList.toggle("mobile")
-            items.forEach(i => i.classList.toggle("mobile"));
-        } 
+        let headerContainer = document.querySelector(".Header");
+        let itemContainer = document.querySelector(".Header__list");
+        let items = document.querySelectorAll(".Header__link");
+        let headerHamburgerContainer = document.querySelector(".Header__hamburger");
+        headerContainer.classList.toggle("mobile")
+        itemContainer.classList.toggle("mobile")
+        items.forEach(i => i.classList.toggle("mobile"));  
+        headerHamburgerContainer.children[0].classList.toggle("rotate");
+        headerHamburgerContainer.children[1].classList.toggle("rotate");
+        headerHamburgerContainer.children[2].classList.toggle("rotate");
     }
 
     return (
@@ -21,7 +24,6 @@ const Header = ({theme}) => {
                 <div className="Header__hamburger--line"></div>
             </div>                            
             <div className="Header__list">
-                <img className="Header__logo" src="./img/logo-white.png" alt="logo"/>
                 <div className="Header__item">
                     <a onClick={handleClick} href="#projects" className="Header__link">Projects</a>
                     <a onClick={handleClick} href="#GraphicDesign" className="Header__link">Graphic design</a>

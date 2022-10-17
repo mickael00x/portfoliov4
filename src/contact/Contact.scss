@@ -15,7 +15,7 @@
         
         bottom: 2rem;
         left: 3rem;
-        width: max-content;
+        min-width: max-content;
         -webkit-perspective: 1000;
         perspective: 1000;
         -webkit-backface-visibility: hidden;
@@ -37,6 +37,7 @@
             left: 30px;
             opacity: 0;
             transition: all 0s ease 0s;
+            min-width: max-content;
         }
         &:hover {
             transition: 0.3s ease-in-out;
@@ -60,7 +61,7 @@
             position: absolute;
             top: -20px;
             left: -12px;
-            width: 140px;
+            width: 190px;
             height: 30px;
         }
         &:before {

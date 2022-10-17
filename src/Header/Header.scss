@@ -8,6 +8,7 @@ button.colorMode {
     cursor: pointer;
     transition: all .3s;
     animation: fadeInBlurred 1s 4s ease-in forwards;
+    z-index: 889;
     & > .moon {
         border-radius: 1rem;
         padding: 1rem;
@@ -15,7 +16,7 @@ button.colorMode {
         color: #706d6d;
         transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
         &:hover {
-            background-color: rgba($dark-bg, .5);
+            background-color: rgba(white, .3);
             color: rgb(244, 239, 99);
         }
     }
@@ -26,42 +27,125 @@ button.colorMode {
         color: rgb(255, 187, 0);
         transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
         &:hover {
-            background-color: rgba($dark-bg, .5);
+            background-color: rgba(white, .3);
             color: white;
         }
     }
 }
 
+// ========= HEADER =========== // 
+
 .Header {
     position: fixed;
-    top: 2rem;
-    left: 25%;
-    width: calc(50vw - 4rem);
-    margin: 0 2rem;
-    height: 50px;
+    height: 0;
     display: flex;
-    padding: 0 3rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: 1px solid #D7D7D7;
-    border-radius: 100rem;
-    z-index: 20;
-    &.dark {
-        background-color: #F2F2F2;
-        color: $dark-bg;
-        border: 1px solid #D7D7D7;
-    }
-    &.mobile {
-        padding: 0;
-        z-index: 1000;
-    }
+    padding: 0;
+    z-index: 777;
+    width: 100vw;
     
-    @media screen and (max-width: 940px) {
-        padding: 0 2rem;
-        background-color: transparent;
-        top: 0;
-        left: 0;
-        width: 100vw;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        padding: 5rem;
+        
+        &.mobile {   
+            opacity: 1;
+            visibility: visible;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 888;
+            background-color: rgba($dark-bg, .96);
+            color: white;
+            animation: growIn .5s cubic-bezier(0,-0.01,.44,-0.03);
+            box-shadow: 0 6px 10px rgba($dark-bg, .5);
+        }
+    }
+
+    @mixin delayed {
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 200ms};
+            }
+        }  
+    }
+    &__link {
+        color: inherit;
+        text-decoration: none;
+        font-size: 7rem;
+        font-family: "Poppins Bold";
+        margin-top: 1rem;
+        margin-left: 2rem;
+        color: inherit;
+        transition: all .3s;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        animation: fadeInTop 1s 1s forwards;
+        z-index: 999;
+        @include delayed;
+
+        &:hover {
+            opacity: .5;
+        }
+        &.mobile {
+            display:block;
+        }
+    }
+    &__logo {
+        max-width: 4rem;
+        margin-top: -1rem;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;             
+    }
+    &__hamburger {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 889;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        transition: all .3s;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba(white, .5);
+            color: white;
+        }
+        
+        &--line {
+            height: 3px;
+            border-radius: 20%;
+            width: 2rem;
+            background-color: white;
+            box-shadow: 0 3px 6px rgba(0,0,0,.5);
+            opacity: 1;
+            transition: all .3s;
+            
+            &:nth-child(1).rotate {
+                transform: rotate(45deg);
+            }
+            &:nth-child(2).rotate {
+                opacity: 0;
+            }
+            &:nth-child(3).rotate {
+                transform: rotate(-45deg);
+                margin-top: -1rem
+            }
+            &:not(:first-child) {
+                margin-top: .4rem;
+            }
+        }
     }
 
     &__backToTop {
@@ -83,107 +167,6 @@ button.colorMode {
         & > svg {
             transition: all .3s;
             font-size: 4rem;
-        }
-    }
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-
-        @media screen and (max-width: 940px) {
-            opacity: 0;
-            visibility: hidden;
-            z-index: -1;
-            flex-direction: column;
-            align-items: flex-start;
-            display: flex;
-            padding: 5rem;
-        }
-        &.mobile {
-            @media screen and (min-width: 940px) {
-                display: none;
-            }   
-            opacity: 1;
-            visibility: visible;
-            position: fixed;
-            justify-content: space-around;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: 888;
-            background-color: $less-dark-bg;
-            color: white;
-            animation: growIn .5s cubic-bezier(0,-0.01,.44,-0.03);
-        }
-    }
-    &__logo {
-        max-width: 4rem;
-        margin-top: -1rem;
-    }
-    &__item {
-        @media screen and (max-width: 940px) {
-            display: flex;
-            flex-direction: column;
-            margin-top: 5rem;             
-        }
-    }
-    &__hamburger {
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        z-index: 889;
-        top: 2rem;
-        left: 2rem;
-        @media screen and (max-width: 940px) {
-            opacity: 1;
-            visibility: visible;
-        }
-        &--line {
-            height: 3px;
-            border-radius: 20%;
-            width: 2rem;
-            background-color: white;
-            box-shadow: 0 3px 6px rgba(0,0,0,.5);
-
-            &:not(:first-child) {
-                margin-top: .4rem;
-            }
-        }
-    }
-    &__link {
-        color: inherit;
-        text-decoration: none;
-        font-size: 1.6rem;
-        margin-left: 2rem;
-        transition: all .3s;
-        @media screen and (max-width: 1077px) {
-            font-size: 1.4rem;
-        }
-
-        &:hover {
-            opacity: .5;
-        }
-
-        @mixin delayed {
-            @for $i from 1 through 20 {
-                &:nth-child(#{$i}) {
-                    animation-delay: #{$i * 200ms};
-                }
-            }  
-        }
-
-        &.mobile {
-            @media screen and (max-width: 940px) {
-                font-size: 3rem;
-                margin-left: 0rem;
-                font-weight: 800;
-                visibility: hidden;
-                opacity: 0;
-                animation: fadeInTop 1s forwards;
-                @include delayed;
-            }
         }
     }
 }
