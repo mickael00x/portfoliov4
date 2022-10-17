@@ -133,14 +133,16 @@ button.colorMode {
             transition: all .3s;
             
             &:nth-child(1).rotate {
-                transform: rotate(45deg);
+                transform: rotate(-45deg);
+                margin-top: .75rem;
             }
             &:nth-child(2).rotate {
                 opacity: 0;
             }
             &:nth-child(3).rotate {
-                transform: rotate(-45deg);
-                margin-top: -1rem
+                transform: rotate(45deg);
+                margin-top: -1rem;
+                margin-bottom: .65rem
             }
             &:not(:first-child) {
                 margin-top: .4rem;

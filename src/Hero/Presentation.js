@@ -12,9 +12,7 @@ const Presentation = ({theme}) => {
                 }
             })
         })
-        setTimeout(() => {
-            observerForAnimatedText.observe(document.querySelector(".subtitle"))
-        }, 11000);
+        observerForAnimatedText.observe(document.querySelector(".subtitle"))
     }, [])
 
     return (
