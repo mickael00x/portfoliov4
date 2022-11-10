@@ -27,9 +27,9 @@ function App() {
             <ToggleColorMode toggleTheme={toggleTheme} theme={theme} />
             <Header />
             <Contact />
-            <Hero />
+            <Hero theme={theme}/>
             <Stack />
-            <SliderBox />
+            <SliderBox theme={theme}/>
             <AboutMe />
             <Footer />
         </div>

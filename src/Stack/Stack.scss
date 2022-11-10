@@ -38,7 +38,7 @@
     }
 
     @mixin transition {
-        @for $i from 1 through 20 {
+        @for $i from 1 through 21 {
             &:nth-child(#{$i}) {
                 transition: all #{$i * 200}ms ease-in;
             }
@@ -46,33 +46,36 @@
     }
 
     &__item {
-        border: 1px solid #D7D7D7;
+        box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
         background-color: white;
         color: $dark-bg;
-        border-radius: 100rem;
+        border-radius: .7rem;
         display: flex;
         min-width: max-content;
         justify-content: center;
+        padding: .3rem 0;
         align-items: center;
         margin: .5rem;
         font-size: 1.9rem;
         text-decoration: none;
         transition: all .5s;
         z-index: 1;
+        color: $dark-bg;
+        cursor: pointer;
         //@include transition;
         @media screen and (max-width: 640px) {
             font-size: 1.4rem;
         }
         
         &:hover {
-            border: 1px solid $blueprint;
-            background-color: rgba($blueprint, .1) ;
+            transform: scale(1.05);
         }
         &:first-child {
             &::before {
                 content: "Click me!";
                 position: absolute; 
                 font-size: 1.5rem;
+                color: inherit;
                 top: -3rem;
                 left: 50%;
                 transform: translateX(-50%);

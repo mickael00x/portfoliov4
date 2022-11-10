@@ -17,7 +17,7 @@ button.colorMode {
         transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
         &:hover {
             background-color: rgba(white, .3);
-            color: rgb(244, 239, 99);
+            color: rgb(255, 234, 0);
         }
     }
     & > .sun {

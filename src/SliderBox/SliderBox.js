@@ -8,7 +8,7 @@ const SliderBox = ({theme}) => {
             <h2>Latest projects</h2>
             <div className={"SliderBox__box " + theme}>
                 { items && items.map((itemData, index) => (
-                    <SliderItem id={index} key={index} itemData={itemData}/>
+                    <SliderItem id={index} key={index} theme={theme} itemData={itemData}/>
                 ))}
             </div>
 

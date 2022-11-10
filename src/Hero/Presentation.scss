@@ -10,6 +10,24 @@
     z-index: 99;
     z-index: 0;
 
+
+    &__pp {
+        position: absolute;
+        top: -6rem;
+        right: -6rem;
+        width: 10rem;
+        margin-bottom: 3rem;
+        border-radius: 100%;
+        box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+        border: 2px dashed $blueprint;
+        
+        @media screen and (max-width: 1000px) {
+            top: -10rem;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }    
+    }
+    
     @media screen and (max-width: 640px) {
         padding: 0rem 2rem;
     }
@@ -29,7 +47,7 @@
         }
         & > .circle {
             border-radius: 100%;
-            border: 1px dashed $purple;
+            border: 1px dashed $blueprint;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -70,6 +88,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
+            color: $blueprint;
             transform: translate(-50%, -50%);
             font-size: 2rem;
             animation: bounceUp 2s ease-in-out infinite;
@@ -93,7 +112,7 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 1.3rem;
-            color: $purple;
+            color: $blueprint;
             width: max-content;
             content: "Scroll down for more";
             @media screen and (max-width: 640px) {
@@ -169,6 +188,29 @@
             // &:nth-child(even) {
             //     // animation: movingObjects2 10s infinite linear both;
             // }
+            @media screen and (max-width: 1040px) {
+                & {
+                    height: 50rem; width: 50rem;
+                }
+                &:nth-child(1) {
+                    //violet
+                    left: +50%;
+                    top: 2rem;
+                }
+                &:nth-child(2) {
+                    right: 2rem;
+                    top: +50%;
+                }
+                &:nth-child(3) {
+                    //violet
+                    right: +50%;
+                    bottom: 2rem;
+                }
+                &:nth-child(4) {
+                    left: 2rem;
+                    bottom: +50%;
+                }
+            }
         }
     }
 
@@ -195,6 +237,7 @@
     }
 
     &__header {
+        position: relative;
         text-align: center;
         font-size: 9rem;
 
@@ -270,7 +313,7 @@
     -webkit-box-sizing:content-box;
     box-sizing:content-box;
     font-size: 4rem;
-
+    height: 4.7rem;
     margin-bottom: 2rem;
     background-image: linear-gradient(to right, $blueprint , $purple-lighter );
     background-image: -webkit-linear-gradient(to right, $blueprint , $purple-lighter);
@@ -310,6 +353,8 @@
     background: -webkit-linear-gradient(to right, $blueprint 0%,  $purple 100%);
     -webkit-background-clip: text;
     background-clip: text;
+    margin: 1rem 0;
+    height: 3.6rem;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
     @media screen and (max-width: 940px) {
@@ -348,10 +393,9 @@
     }
     &-outline {
         background-color: transparent;
-        color: $purple;
-        border: 1px solid $purple;
+        color: $blueprint;
+        border: none;
         &:hover {
-            background-color: $purple;
             color: white;
         }
     }

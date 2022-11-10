@@ -8,6 +8,10 @@
     max-width: 100%;
     width: 100%;
     margin-top: 20rem;
+    @media screen and (max-width: 640px) {
+        margin-top: 0rem;
+        padding: 1rem;
+    }
 
     & > h2 {
         margin-bottom: 3rem;

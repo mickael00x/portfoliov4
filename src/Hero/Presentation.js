@@ -17,12 +17,15 @@ const Presentation = ({theme}) => {
 
     return (
         <section id="top" className="Presentation section">
-            <h1 className="Presentation__header heading-primary">Self taught developer<br/>
+            
+            <h1 className="Presentation__header heading-primary">
+                <img className="Presentation__pp" src="./img/pp.jpg"/>
+                Self taught developer<br/>
                     <div className="heading-subtitle subtitle"> with high sensitivity for UI/UX</div>
                     <div className="heading-subtitle-mobile"> with high sensitivity for UI/UX</div>
             </h1>
             <p className="Presentation__text">
-            Contact me for Front-end development (ReactJS), custom CRM, plugins, integration, API and more!
+            Contact me for Front-end development (NextJS, ReactJS), custom CRM, plugins, integration, API and more!
             </p>
             <div className="Presentation__actions">
                 <a href="#projects" className="button view-projects">View my projects</a>

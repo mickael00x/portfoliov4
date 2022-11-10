@@ -6,21 +6,35 @@ const Stack = () => {
     
     let stacks = 
     [{
+        name: "NextJS", 
+        date: "Since 2022",
+        tag: "#coding",
+        link: "https://advent-calendar-puzzle.vercel.app/"
+    }, 
+    {
+        name: "TypeScript", 
+        date: "Since 2022",
+        tag: "#coding",
+        link: "https://github.com/mickael00x/ToDo"
+    }, 
+    {
         name: "Javascript", 
         date: "Since 2018",
         tag: "#coding",
-        link: "https://www.google.com"
+        link: "http://message-app.surge.sh/"
     }, 
     {
         name: "React", 
         date: "Since 2019",
-        tag: "#coding"
-        
+        tag: "#coding",
+        link: "https://strava-api.surge.sh"
     },
+    
     {
-        name: "AdobeXD",
-        date: "Since 2018",
-        tag: "#graphicDesign"
+        name: "Docker",
+        date: "Since 2020",
+        tag: "#container",
+        link: "https://github.com/mickael00x/docker-traefik"
     }, 
     {
         name: "WordPress",
@@ -55,74 +69,54 @@ const Stack = () => {
     {
         name: "Symfony", 
         date: "Since 2019",
-        tag: "#coding"
-        
+        tag: "#coding",
+        link: "https://websurg.com"
     }, 
     {
         name: "VIM", 
         date: "Since 2020",
-        tag: "#tool"
-    
-    }, 
-    {
-        name: "NodeJS", 
-        date: "Since 2020",
-        tag: "#coding"
-        
+        tag: "#tool",
+        link: "https://github.com/mickael00x/dotfiles"
     }, 
     {
         name: "Supabase", 
         date: "Since 2021",
         tag: "#database"
-        
-    }, 
-    {
-        name: "MongoDB", 
-        date: "Since 2021",
-        tag: "#database"
-        
-    }, 
+    },
     {
         name: "MySQL", 
         date: "Since 2019",
-        tag: "#coding"
-        
+        tag: "#database"
     }, 
     {
         name: "Sass", 
         date: "Since 2017",
-        tag: "#coding"
-        
+        tag: "#coding",
+        link: "https://github.com/mickael00x/natours"
     }, 
+    {
+        name: "Tailwind", 
+        date: "Since 2021",
+        tag: "#coding",
+        link: ""
+    },
     {
         name: "gsap", 
         date: "Since 2021",
-        tag: "#web_animation"
-        
-    }, 
-    {
-        name: "Cura", 
-        date: "Since 2020",
-        tag: "#3Dprint"
-        
+        tag: "#webAnimation",
+        link: "https://mickael-grass.com"
     }, 
     {
         name: "Shapr3D", 
         date: "Since 2021",
-        tag: "#3Dmodeling"
-        
-    }, 
-    {
-        name: "QMK", 
-        date: "Since 2021",
-        tag: "#customKeyboard"
-        
+        tag: "#3Dmodeling",
+        link: "https://www.icloud.com/iclouddrive/026bqvxrBsgQG3US8h2V7B-iA#Belkin2"
     }, 
     {
         name: "Arduino", 
         date: "Since 2020",
         tag: "#IoT",
-        link: "https://www.google.com"
+        link: "https://github.com/mickael00x/ambilight"
     }];
     
     useEffect(() => {
@@ -134,7 +128,7 @@ const Stack = () => {
     return (
         <div id="stack" className="stack section">
             <div className="stack__lines"></div>
-            <h2 className="stack__title">My expertise</h2>
+            <h2 className="stack__title">Skills</h2>
             <div className="stack__subtitle">Click on element to view associated projects made with ❤️</div>
             <div className="stack__container">
                 <div className="stack__list">
