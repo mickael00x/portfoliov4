@@ -12,16 +12,8 @@ import useDarkMode from './customHook/useDarkMode';
 import ToggleColorMode from './Header/ToggleColorMode';
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
   const {theme, toggleTheme} = useDarkMode();
-  
-  useEffect(() => {
-    window.addEventListener('load', () => {
-      return setIsLoaded(true);
-    });
-  }, [isLoaded])
-  
-  if(isLoaded) {
+
     return (
         <div className={"App " + theme}>
             <ToggleColorMode toggleTheme={toggleTheme} theme={theme} />
@@ -34,11 +26,7 @@ function App() {
             <Footer />
         </div>
     );
-  } else {
-    return (
-      <Loader />
-    )
-  }
+
 }
 
 export default App;
