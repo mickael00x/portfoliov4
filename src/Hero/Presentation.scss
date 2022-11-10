@@ -162,6 +162,11 @@
             background: -webkit-linear-gradient(to right, #2d2929, $dark-bg);
             transition: all 2s cubic-bezier(1,-0.3,0,1.18);
 
+            .light & {
+                box-shadow: inset 3px 3px 100px rgba($blueprint, 0.2);
+                background: linear-gradient(to right, #f5ebeb, #f6ebeb);
+                background: -webkit-linear-gradient(to right, #f5ebeb, #f6ebeb);
+            }
             &:nth-child(1) {
                 //violet
                 left: -6rem;
@@ -354,7 +359,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     margin: 1rem 0;
-    height: 3.6rem;
+    height: 6rem;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
     @media screen and (max-width: 940px) {
