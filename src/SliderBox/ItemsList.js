@@ -1,10 +1,18 @@
 export const items = [
     {
+        id:8,
+        title: "Hanssen",
+        description: "Industrial transmission components",
+        tags: ["Custom theme", "WordPress"],
+        link: "https://hanssen.mickael-grass.com",
+        imageSrc: "./img/projects/hanssen.jpg",
+    },
+    {
         id:6,
         title: "Dimaco",
         description: "Industrial transmission components",
         tags: ["API", "WordPress"],
-        link: "https://dimaco.mickael-grass.com",
+        link: "https://dimaco.fr",
         imageSrc: "./img/projects/Dimaco.jpg",
     },
     {
